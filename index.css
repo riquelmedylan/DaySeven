@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.split {
+  width: 100%;
+  height: 100%;
+  transition: width 0.8s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.split:nth-child(1) {
+  background-image: url("https://50projects50days.com/projects/split-landing-page/ps.jpg ");
+  background-size: cover;
+}
+.split:nth-child(2) {
+  background-image: url("https://50projects50days.com/projects/split-landing-page/xbox.jpg ");
+  background-size: cover;
+}
+.split:hover {
+  width: 240rem;
+}
+
+.split:nth-child(1)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background: rgba(17, 0, 255, 0.747);
+  opacity: 0.5;
+}
+
+.split:nth-child(2)::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background: rgb(49, 49, 49);
+  opacity: 0.5;
+}
+
+.split > p {
+  font-size: 3rem;
+}
+.split > button {
+  height: 70px;
+  width: 220px;
+  background-color: transparent;
+  border: 3px solid white;
+  font-size: 1.5rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.split:nth-child(2) > button:hover {
+  background-color: rgb(39, 103, 39);
+  border-color: rgb(39, 103, 39);
+}
+.split:nth-child(1) > button:hover {
+  background-color: rgba(83, 73, 225, 0.847);
+  border-color: rgba(83, 73, 225, 0.847);
+}
